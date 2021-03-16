@@ -52,7 +52,8 @@ void function()
 	const char* p2 = greeting; // Pointer that points to a const character array
 	char* const p3 = greeting; // Const pointer that points to a character array
 	const char* const p4 = greeting; // Const pointer that points to a const character array
-
+	// Attention: const char* p is equal to char const* p, they are all pointers points to const variable
+	//			  However, char* const p is different, it is a const pointer
 }
 
 int main()
