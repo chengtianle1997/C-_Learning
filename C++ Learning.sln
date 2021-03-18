@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "overload", "overload\functi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum", "enum\enum.vcxproj", "{91A230B2-37AB-469B-AC68-F85A41A92038}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "struct_and_class", "struct_and_class\struct_and_class.vcxproj", "{173F171E-FC69-4224-AE9D-6B539C07CFD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{91A230B2-37AB-469B-AC68-F85A41A92038}.Release|x64.Build.0 = Release|x64
 		{91A230B2-37AB-469B-AC68-F85A41A92038}.Release|x86.ActiveCfg = Release|Win32
 		{91A230B2-37AB-469B-AC68-F85A41A92038}.Release|x86.Build.0 = Release|Win32
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Debug|x64.ActiveCfg = Debug|x64
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Debug|x64.Build.0 = Debug|x64
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Debug|x86.ActiveCfg = Debug|Win32
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Debug|x86.Build.0 = Debug|Win32
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Release|x64.ActiveCfg = Release|x64
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Release|x64.Build.0 = Release|x64
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Release|x86.ActiveCfg = Release|Win32
+		{173F171E-FC69-4224-AE9D-6B539C07CFD8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
