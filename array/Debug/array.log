@@ -1,2 +1,4 @@
 ﻿  array.cpp
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\array\array.cpp(17,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\array\array.cpp(43,6): warning C4101: 'example_int': unreferenced local variable
   array.vcxproj -> C:\Users\cheng\Desktop\C++ Learning\C++ Learning\Debug\array.exe
