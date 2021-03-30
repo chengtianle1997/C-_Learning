@@ -25,9 +25,9 @@ public:
 // Operator overload
 class Box
 {
-private:
-	double x, y, z;
 public:
+	double x, y, z;
+
 	Box(double x, double y, double z)
 	{
 		this->x = x;
@@ -45,12 +45,38 @@ public:
 		return box;
 	}
 
+	// call operator function
+	Box Add(const Box& b)
+	{
+		// These two lines of code are the same.
+		// return *this + b;
+		return operator+(b);
+	}
+
+	// Operator '==' overload
+	bool operator==(const Box& other) const
+	{
+		return x == other.x && y == other.y && z == other.z;
+	}
+	// Operator '!=' overload
+	bool operator!=(const Box& other) const
+	{
+		return !(*this == other);
+	}
+
 	void Print()
 	{
 		std::cout << x << "," << y << "," << z << std::endl;
 	}
 
 };
+
+// Overload '<<' operator for class Box
+std::ostream& operator<<(std::ostream& stream, const Box& other)
+{
+	stream << other.x << "," << other.y << "," << other.z;
+	return stream;
+}
 
 int main()
 {
@@ -68,4 +94,15 @@ int main()
 	box1.Print();
 	box2.Print();
 	box.Print();
+	box = box1.Add(box2);
+	box.Print();
+	// Overload operator '<<'
+	std::cout << "Overload operator '<<'" << std::endl;
+	std::cout << box << std::endl;
+	// Overload operator '=='
+	if (box1 != box2)
+	{
+		std::cout << "box1 does not equal to box2" << std::endl;
+	}
+
 }
