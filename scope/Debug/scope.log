@@ -1,0 +1,3 @@
+﻿  scope.cpp
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\scope\scope.cpp(38): warning C4172: returning address of local variable or temporary: a
+  scope.vcxproj -> C:\Users\cheng\Desktop\C++ Learning\C++ Learning\Debug\scope.exe
