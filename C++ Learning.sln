@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "smart_pointer", "smart_poin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "copy", "copy\copy.vcxproj", "{033A3DA8-C5ED-488A-9CD5-164C7ED4E509}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arrow_operator", "arrow_operator\arrow_operator.vcxproj", "{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -221,6 +223,14 @@ Global
 		{033A3DA8-C5ED-488A-9CD5-164C7ED4E509}.Release|x64.Build.0 = Release|x64
 		{033A3DA8-C5ED-488A-9CD5-164C7ED4E509}.Release|x86.ActiveCfg = Release|Win32
 		{033A3DA8-C5ED-488A-9CD5-164C7ED4E509}.Release|x86.Build.0 = Release|Win32
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Debug|x64.ActiveCfg = Debug|x64
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Debug|x64.Build.0 = Debug|x64
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Debug|x86.ActiveCfg = Debug|Win32
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Debug|x86.Build.0 = Debug|Win32
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Release|x64.ActiveCfg = Release|x64
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Release|x64.Build.0 = Release|x64
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Release|x86.ActiveCfg = Release|Win32
+		{8516B9CD-3EDC-4BC2-A07F-FFF86A224AE6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
