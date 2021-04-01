@@ -25,6 +25,11 @@ public:
 	}
 };
 
+void PrintEntity(Entity& e)
+{
+
+}
+
 int main()
 {
 	// unique pointer: make sure that only one copy of an object exists
@@ -91,4 +96,32 @@ int main()
 	// to shared pointer to assume temporary ownership. If the shared pointer is destroyed at this time, the
 	// object's lifetime is extended until the temporary shared pointer is destroyed as well.
 
+	std::cout << "Smart pointer methods:" << std::endl;
+	// Let's talk more about the mothod of smart pointer
+	{
+		std::unique_ptr<Entity> e(new Entity());
+
+		// If we want to use the reference
+		PrintEntity(*e);
+		// If we want to use the method of class Entity
+		e->Print();
+		// We can use these characteristics of smart pointer as a pointer
+		// because these operation are overloaded in smart pointer classes
+
+		// If we want to get the raw pointer
+		e.get();
+
+		// If we want to free the memory before the scope '}'
+		e.reset();
+		std::cin.get();
+
+		// Create a pointer using make_unique
+		auto ptr1 = std::make_unique<Entity>();
+		// A unique pointer can only be moved, this means the ownership of the memory
+		// resource is transfered to another unique_ptr and the original unique pointer no longer owns it.
+		auto ptr2 = std::move(ptr1);
+		// The unique pointer is exactly as efficient as a raw pointer in terms of performance and memory. 
+		// This means the unique_ptr is exactly the same size as the raw pointer, either 4 or 8 bytes decided by OS.
+
+	}
 }
