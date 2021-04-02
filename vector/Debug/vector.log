@@ -1,0 +1,29 @@
+﻿  vector.cpp
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector\vector.cpp(36,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector\vector.cpp(44,20): warning C4018: '<': signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory(694,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(682): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,int,int>(_Alloc &,_Objty *const ,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Vertex>,
+              _Ty=Vertex,
+              _Objty=Vertex
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(687): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,int,int>(_Alloc &,_Objty *const ,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Vertex>,
+              _Ty=Vertex,
+              _Objty=Vertex
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(700): message : see reference to function template instantiation 'void std::vector<Vertex,std::allocator<Vertex>>::_Emplace_back_with_unused_capacity<_Ty,_Ty,_Ty>(_Ty &&,_Ty &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector\vector.cpp(80): message : see reference to function template instantiation 'void std::vector<Vertex,std::allocator<Vertex>>::emplace_back<int,int,int>(int &&,int &&,int &&)' being compiled
+  vector.vcxproj -> C:\Users\cheng\Desktop\C++ Learning\C++ Learning\Debug\vector.exe
