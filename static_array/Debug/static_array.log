@@ -1,0 +1,9 @@
+﻿  static_array.cpp
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\static_array\static_array.cpp(9,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\static_array\static_array.cpp(27): message : see reference to function template instantiation 'void Print<std::array<int,5>>(T)' being compiled
+          with
+          [
+              T=std::array<int,5>
+          ]
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\static_array\static_array.cpp(13,20): warning C4018: '<': signed/unsigned mismatch
+  static_array.vcxproj -> C:\Users\cheng\Desktop\C++ Learning\C++ Learning\Debug\static_array.exe
