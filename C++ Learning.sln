@@ -89,6 +89,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "casting", "casting\casting.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "conditional_and_action_breakpoint", "conditional_and_action_breakpoint\conditional_and_action_breakpoint.vcxproj", "{096B8696-CD1E-4CF9-BA42-674F8F364A19}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "precompile_header", "precompile_header\precompile_header.vcxproj", "{D227290D-1D0F-46C2-BA1E-59EBBB229115}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -441,6 +443,14 @@ Global
 		{096B8696-CD1E-4CF9-BA42-674F8F364A19}.Release|x64.Build.0 = Release|x64
 		{096B8696-CD1E-4CF9-BA42-674F8F364A19}.Release|x86.ActiveCfg = Release|Win32
 		{096B8696-CD1E-4CF9-BA42-674F8F364A19}.Release|x86.Build.0 = Release|Win32
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Debug|x64.ActiveCfg = Debug|x64
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Debug|x64.Build.0 = Debug|x64
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Debug|x86.ActiveCfg = Debug|Win32
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Debug|x86.Build.0 = Debug|Win32
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Release|x64.ActiveCfg = Release|x64
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Release|x64.Build.0 = Release|x64
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Release|x86.ActiveCfg = Release|Win32
+		{D227290D-1D0F-46C2-BA1E-59EBBB229115}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
