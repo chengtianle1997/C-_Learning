@@ -49,6 +49,9 @@ int main()
 	// cast downwards: from base class to child class (Base class must have virtual functions)
 	Derived* derived_d = dynamic_cast<Derived*>(base_a);
 
+	// dynamic_cast can be used to check whether an object is the class we want or not.
+	// if it is not the specified class, it will return a null pointer.
+
 	// reinterpret_cast: deal with almost all the conversions
 	// reinterpret_cast just reinterpret the block of memory in another way.
 
