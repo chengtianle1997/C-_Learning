@@ -21,6 +21,7 @@ int main()
 	std::tie(name, age) = CreatePerson();
 
 	// structured binding: just keep returning a tuple
+	// we do not need to define name_t and age_t.
 	auto [name_t, age_t] = CreatePerson();
 	std::cout << name_t << ", " << age_t << std::endl;
 	// Remember to switch the compiler to C++ 17
