@@ -115,6 +115,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lvalue_and_rvalue", "lvalue
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "track_memory_allocation", "track_memory_allocation\track_memory_allocation.vcxproj", "{EF41C097-AD95-4024-87FD-5A62B25F5866}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "small_string_optimization", "small_string_optimization\small_string_optimization.vcxproj", "{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -571,6 +573,14 @@ Global
 		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x64.Build.0 = Release|x64
 		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x86.ActiveCfg = Release|Win32
 		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x86.Build.0 = Release|Win32
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Debug|x64.ActiveCfg = Debug|x64
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Debug|x64.Build.0 = Debug|x64
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Debug|x86.ActiveCfg = Debug|Win32
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Debug|x86.Build.0 = Debug|Win32
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Release|x64.ActiveCfg = Release|x64
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Release|x64.Build.0 = Release|x64
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Release|x86.ActiveCfg = Release|Win32
+		{FAF91EEA-D8F4-4D4C-A265-E2D3E5AF10C9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
