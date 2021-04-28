@@ -111,6 +111,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "string_faster", "string_fas
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "virtual_benchmark", "virtual_benchmark\virtual_benchmark.vcxproj", "{19B48797-85A9-4B9C-9DB7-B20FDC61969A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lvalue_and_rvalue", "lvalue_and_rvalue\lvalue_and_rvalue.vcxproj", "{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "track_memory_allocation", "track_memory_allocation\track_memory_allocation.vcxproj", "{EF41C097-AD95-4024-87FD-5A62B25F5866}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -551,6 +555,22 @@ Global
 		{19B48797-85A9-4B9C-9DB7-B20FDC61969A}.Release|x64.Build.0 = Release|x64
 		{19B48797-85A9-4B9C-9DB7-B20FDC61969A}.Release|x86.ActiveCfg = Release|Win32
 		{19B48797-85A9-4B9C-9DB7-B20FDC61969A}.Release|x86.Build.0 = Release|Win32
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Debug|x64.ActiveCfg = Debug|x64
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Debug|x64.Build.0 = Debug|x64
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Debug|x86.ActiveCfg = Debug|Win32
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Debug|x86.Build.0 = Debug|Win32
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Release|x64.ActiveCfg = Release|x64
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Release|x64.Build.0 = Release|x64
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Release|x86.ActiveCfg = Release|Win32
+		{D9B2232A-844C-4FA5-8587-F7F6D7CE799D}.Release|x86.Build.0 = Release|Win32
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Debug|x64.ActiveCfg = Debug|x64
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Debug|x64.Build.0 = Debug|x64
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Debug|x86.ActiveCfg = Debug|Win32
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Debug|x86.Build.0 = Debug|Win32
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x64.ActiveCfg = Release|x64
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x64.Build.0 = Release|x64
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x86.ActiveCfg = Release|Win32
+		{EF41C097-AD95-4024-87FD-5A62B25F5866}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
