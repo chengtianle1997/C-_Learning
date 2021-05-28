@@ -12,6 +12,11 @@ public:
 	~Vector()
 	{
 		delete[] m_Data;
+
+		/*
+		clear();
+		::operator delete(m_Data, m_Capacity * sizeof(T));
+		*/
 	}
 
 	void push_back(const T& value)
@@ -73,7 +78,14 @@ private:
 	void ReAlloc(size_t newCapacity)
 	{
 		// 1. allocate a new block of memory
+
 		T* newBlock = new T[newCapacity];
+
+		// Actually, we do not need to call the constructor of T here, 
+		// what we want to do is just allocating enough memory.
+
+		// T* newBlock = (T*)::operator new(newCapacity * sizeof(T));
+
 		// 2. copy or move old elements to new block
 		if (newCapacity < m_Size) // if new capacity is smaller, update the m_size to shrink the vector
 			m_Size = newCapacity;
@@ -82,7 +94,17 @@ private:
 			newBlock[i] = std::move(m_Data[i]);
 		}
 		// 3. delete old block
+		
 		delete[] m_Data;
+
+		// Instead of calling delete like this, we can write like:
+
+		/*
+		for (size_t i = 0; i < m_Size; i++)
+			m_Data[i].~T();
+		::operator delete(m_Data, m_Capacity * sizeof(T));
+		*/
+
 		m_Data = newBlock;
 		m_Capacity = newCapacity;
 	}

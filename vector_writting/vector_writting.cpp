@@ -92,4 +92,26 @@ int main()
 	PrintVector(vector3);
 	vector3.clear();
 	PrintVector(vector3);
+
+	// If there is a memory block in vector3 and it is deleted by the destrutor,
+	// the delete operation is called more than once, which will lead to a crash.
+
+	// So, we need to ensure that the destructor is called only once,
+	// we make that by only using clear() function to call the destructor 
+	// and other functions just call the clear() function.  
+	// See function ~Vector() and Realloc() in Vector.h
+
+	// Let's try simple types like int
+	Vector<int> intVector;
+	intVector.push_back(1);
+	intVector.push_back(2);
+	intVector.push_back(3);
+	intVector.push_back(4);
+	intVector.push_back(5);
+	PrintVector(intVector);
+	intVector.pop_back();
+	intVector.pop_back();
+	PrintVector(intVector);
+	intVector.clear();
+	PrintVector(intVector);
 }
