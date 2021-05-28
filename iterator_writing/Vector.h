@@ -9,18 +9,183 @@ public:
 	using ReferenceType = typename ValueType&;
 public:
 	VectorIterator(PointerType ptr)
-	{
+		: m_Ptr(ptr) {}
 
+	VectorIterator& operator++()
+	{
+		m_Ptr++;
+		return *this;
 	}
+	VectorIterator operator++(int)
+	{
+		VectorIterator iterator = *this;
+		++(*this);
+		return iterator;
+	}
+	VectorIterator& operator--()
+	{
+		m_Ptr--;
+		return *this;
+	}
+	VectorIterator operator--(int)
+	{
+		VectorIterator iterator = *this;
+		--(*this);
+		return iterator;
+	}
+
+	ReferenceType operator[](int index)
+	{
+		return *(m_Ptr + index);
+	}
+	PointerType operator->()
+	{
+		return m_Ptr;
+	}
+	ReferenceType operator*()
+	{
+		return *m_Ptr;
+	}
+	
+	bool operator==(const VectorIterator& other) const
+	{
+		return m_Ptr == other.m_Ptr;
+	}
+	bool operator!=(const VectorIterator& other) const
+	{
+		return !(*this == other);
+	}
+
+private:
+	PointerType m_Ptr;
 };
 
 template <typename T>
 class Vector {
 public:
 	using ValueType = T;
+	using iterator = VectorIterator<Vector<T>>;
 public:
 	Vector()
 	{
-
+		// allocate 2 elements
+		ReAlloc(2);
 	}
+
+	~Vector()
+	{
+		//delete[] m_Data;
+
+		clear();
+		::operator delete(m_Data, m_Capacity * sizeof(T));
+	}
+
+	// iterator
+	iterator begin()
+	{
+		return iterator(m_Data);
+	}
+	iterator end()
+	{
+		return iterator(m_Data + m_Size);
+	}
+
+	void push_back(const T& value)
+	{
+		if (m_Size >= m_Capacity)
+		{
+			ReAlloc(m_Capacity + m_Capacity / 2); // grow 50%
+		}
+
+		// m_Data[m_Size] = std::move(value); // move instead of copy for better performance
+		new(&m_Data[m_Size]) T(std::move(value));
+
+		m_Size++;
+	}
+
+	template <typename... Args>
+	T& emplace_back(Args&&... args)
+	{
+		if (m_Size >= m_Capacity)
+		{
+			ReAlloc(m_Capacity + m_Capacity / 2); // grow 50%
+		}
+
+		// m_Data[m_Size] = T(std::forward<Args>(args)...); // Constructed here, and move into that memory
+		new(&m_Data[m_Size]) T(std::forward<Args>(args)...);  // Constructed in-place, without move operation.
+		return m_Data[m_Size++];
+	}
+
+	void pop_back()
+	{
+		if (m_Size > 0)
+		{
+			m_Size--;
+			m_Data[m_Size].~T();
+		}
+	}
+
+	void clear()
+	{
+		for (size_t i = 0; i < m_Size; i++)
+			m_Data[i].~T();
+		m_Size = 0;
+	}
+
+	// non-const version index operator
+	T& operator[](size_t index)
+	{
+		return m_Data[index];
+	}
+	// const version index operator
+	const T& operator[](size_t index) const
+	{
+		return m_Data[index];
+	}
+	// size function
+	size_t size() const
+	{
+		return m_Size;
+	}
+private:
+	void ReAlloc(size_t newCapacity)
+	{
+		// 1. allocate a new block of memory
+
+		// T* newBlock = new T[newCapacity];
+
+		// Actually, we do not need to call the constructor of T here, 
+		// what we want to do is just allocating enough memory.
+
+		T* newBlock = (T*)::operator new(newCapacity * sizeof(T));
+
+		// 2. copy or move old elements to new block
+		if (newCapacity < m_Size) // if new capacity is smaller, update the m_size to shrink the vector
+			m_Size = newCapacity;
+		for (size_t i = 0; i < m_Size; i++)
+		{
+			// newBlock[i] = std::move(m_Data[i]);
+			new (&newBlock[i]) T(std::move(m_Data[i]));
+		}
+		// 3. delete old block
+
+		// delete[] m_Data;
+
+		// Instead of calling delete like this, we can write like:
+
+		for (size_t i = 0; i < m_Size; i++)
+			m_Data[i].~T();
+
+		::operator delete(m_Data, m_Capacity * sizeof(T));
+
+		m_Data = newBlock;
+		m_Capacity = newCapacity;
+	}
+
+	T* m_Data = nullptr;
+
+	size_t m_Size = 0;
+	size_t m_Capacity = 0;
 };
+
+

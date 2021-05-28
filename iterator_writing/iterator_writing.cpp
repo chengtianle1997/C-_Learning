@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>  // the vector in STL
+#include <string>
 #include "Vector.h"  // our self-written vector class
 
 
@@ -29,11 +30,24 @@ int main()
 		std::cout << i << " ";
 	}
 	std::cout << std::endl;
-	for (Vector<int>::iterator it = values.begin(); it < values.end(); it++)
+	for (Vector<int>::iterator it = values.begin(); it != values.end(); it++)
 	{
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
-#endif
+	for (int value : values)
+	{
+		std::cout << value << " ";
+	}
+	std::cout << std::endl;
 
+	Vector<std::string> string_vector;
+	string_vector.push_back("C++");
+	string_vector.push_back("Tommy");
+	string_vector.push_back("Vector");
+	for (std::string str : string_vector)
+	{
+		std::cout << str << std::endl;
+	}
+#endif
 }

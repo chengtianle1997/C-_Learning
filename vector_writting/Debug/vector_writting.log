@@ -2,7 +2,7 @@
 C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector_writting\vector_writting.cpp(63,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector_writting\vector_writting.cpp(54,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector_writting\vector_writting.cpp(78): message : see reference to function template instantiation 'void PrintVector<std::string>(const Vector<std::string> &)' being compiled
-C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector_writting\Vector.h(40,44): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Users\cheng\Desktop\C++ Learning\C++ Learning\vector_writting\Vector.h(42,44): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=int
